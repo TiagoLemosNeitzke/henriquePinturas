@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+.botao {
+    color: #1414BA;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color:#FEFF3D;
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 15px;
+}
+
+.botao:hover {
+    background-color: #FEFFD7;
+    color: #1414BA;
+}
+
+/* menu */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#1414BA;
+}
+
+nav a img {
+    height: 100px;
+    width: 100px;
+    padding-top: 2px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    font-size: 25px;
+}
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul li a:hover {
+    background-color: #FEFF3D;
+    color: #1414BA;
+}
+
+/* cabeçalho */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/bghome.jpg);    
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+header{
+    background:
+           /* top, transparent black, faked with gradient */ 
+           linear-gradient(
+             rgba(0, 0, 0, 0.5), 
+             rgba(0, 0, 0, 0.5)
+           ),
+           /* bottom, image */
+           url(../img/bghome.jpg);
+           background-size: cover;
+        background-repeat: no-repeat;
+        background-position: fixed;
+}
+
+header h1 {
+    color: #FFFFFF;
+    filter: brightness(1);
+}
+
+header p {
+    margin-bottom: 4em; 
+}
+
+/* sobre */
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 10px 20px 20px;
+    background-color: #1414BA;
+    color: #FFFFFF;
+}
+
+#sobre h2 {
+    color: #FFFFFF;
+    font-size: 3em;
+}
+
+#sobre p {
+    margin-bottom: 2.5em;
+    max-width: 800px;
+    font-size: 1.5em;
+    font-weight: 400px;
+    text-align: justify;
+    text-indent: 50px;
+}
+
+#sobre .botao {
+    background-color:#FEFF3D;
+    color: #1414Ba;
+}
+
+#sobre .botao:hover {
+    background-color: #FEFFD7;
+    color: #1414BA;
+}
+
+/* serviços */
+
+#serviços {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #FEFFD7;
+}
+
+#serviços h2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#serviços div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#serviços div .imgserv {
+    width: 60px;
+    height: 51px;
+}
+
+#serviços div .imgserv:hover {
+    transform: scale(6);
+}
+
+#serviços div h3 {
+    font-size: 20px;
+}
+
+#serviços div p {
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* contato */
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #FEFFD7;
+}
+
+#contato h2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#contato p {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+#contato div i{
+    color: green;
+}
+
+#contato div p a {
+    text-decoration: none;
+    color: #282828;
+}
+
+#contato div p a:hover{
+    color: #1414BA;
+    background-color: #FEFF3D;
+}
+
+/* rodapé */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color:#1414BA;
+    color: #FFFFFF;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FEFF3D;
+}
+
+footer a:hover {
+    color: #1414BA;
+    background-color: #FEFFD7;
+}
+
+/* media query */
+
+@media screen and (min-width: 768px) {
+    /*nav*/
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /*Cabeçalho*/
+
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+
+    /*Sobre*/
+
+    #sobre {
+        height: 250px;
+        height: 50vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    /*Serviços*/
+
+    #serviços {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #serviços h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #serviços div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+    
+    /*Contato*/
+
+    #contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #contato h2, #contato p {
+        width: 100%;
+    }
+}
